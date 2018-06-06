@@ -115,6 +115,7 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
         this.mContext = context;
         mTabsContainer = new LinearLayout(context);
         addView(mTabsContainer);
+        mTabsContainer.setGravity(Gravity.CENTER_HORIZONTAL);//没有设置均分屏幕宽度的时候会居中显示,如果要居左显示则注释此行,也可修改为属性可配置形式
 
         obtainAttributes(context, attrs);
 
